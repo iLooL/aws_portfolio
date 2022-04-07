@@ -1,8 +1,9 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    margin-top: 1rem;
 }
 
 .project-title {
@@ -123,10 +124,23 @@
     transform: scale(1);
 }
 
+@media screen and (max-width: 1400px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .card-container {
       grid-template-columns: 1fr;
+      justify-items: center;
     }
+
+    .card {
+        margin: 1em 0;
+    }
+
 }
 
 @media screen and (max-width: 500px) {

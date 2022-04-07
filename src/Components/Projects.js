@@ -28,13 +28,16 @@ const Projects = () => {
 
     return (
         <section className="projects">
-                <div className="card-container">
+                <div className="container">
                     <div className="landing-text">
                         <h1 className="project-title">
                             Projects
                         </h1>
                     </div>
-                    <Post />
+                    <div className="card-container">
+                        <Post />
+                        <Post />
+                    </div>
                 </div>
         </section>
     )
